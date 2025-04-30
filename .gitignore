@@ -1,6 +1,4 @@
 application-secret.properties
-src/main/frontend/node_modules/**
-src/main/frontend/build/**
 
 HELP.md
 .gradle
