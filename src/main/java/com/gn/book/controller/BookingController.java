@@ -2,8 +2,10 @@ package com.gn.book.controller;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,9 +36,9 @@ public class BookingController {
     public BookingDocument saveBooking() {
     	BookingDocument booking = new BookingDocument();
     	booking.setId(UUID.randomUUID());
-    	booking.setRoom_id(101);
-    	booking.setRoom_name("회의실 A");
-    	booking.setTitle("멘토링 회의");
+    	booking.setRoom_id(102);
+    	booking.setRoom_name("회의실 B");
+    	booking.setTitle("주간 회의");
     	booking.setStart_time(Instant.now());
     	booking.setEnd_time(booking.getStart_time().plusSeconds(3600));
     	
@@ -46,6 +48,16 @@ public class BookingController {
     @GetMapping("/api/test/search")
     public List<BookingDocument> searchByTitle(@RequestParam("title") String title) {
         return bookingSearchRepository.findByTitle(title);
+    }
+    
+    @PostMapping("/api/test/check-duplication")
+    public ResponseEntity<?> checkDuplicate(@RequestBody BookingDocument bookingRequest) {
+        boolean isDuplicate = bookingService.isDuplicateBooking(
+            bookingRequest.getRoom_id(),
+            bookingRequest.getStart_time(),
+            bookingRequest.getEnd_time()
+        );
+        return ResponseEntity.ok(Map.of("duplicate", isDuplicate));
     }
     
     
