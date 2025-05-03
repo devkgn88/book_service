@@ -114,6 +114,19 @@ networks:
 ```
 docker-compose up --build
 ```
+5. docker에서 cassandra 실행
+```
+docker exec -it cassandra bash -c "cqlsh -u cassandra -p cassandra"
+```
+6. cassandra에 keyspace 생성 및 접근
+```
+CREATE KEYSPACE spring_cassandra WITH replication = {'class' : 'SimpleStrategy', 'replication_factor' : 1};
+USE spring_cassandra;
+```
+7. table 생성
+```
+CREATE TABLE booking(id UUID PRIMARY KEY, room_id int, room_name text, title text, start_time timestamp, end_time timestamp);
+```
 
 ## 📫 문의
 이메일: devkgn88@gmail.com
