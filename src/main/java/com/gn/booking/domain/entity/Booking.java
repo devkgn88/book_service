@@ -1,4 +1,4 @@
-package com.gn.book.domain;
+package com.gn.booking.domain.entity;
 
 import java.time.Instant;
 import java.util.UUID;

@@ -1,10 +1,10 @@
-package com.gn.book;
+package com.gn.booking;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BookServiceApplicationTests {
+class BookingServiceApplicationTest {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,12 @@
-package com.gn.book;
+package com.gn.booking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BookServiceApplication {
-
+public class BookingServiceApplication {
+	
 	public static void main(String[] args) {
-		SpringApplication.run(BookServiceApplication.class, args);
+		SpringApplication.run(BookingServiceApplication.class, args);
 	}
-
 }

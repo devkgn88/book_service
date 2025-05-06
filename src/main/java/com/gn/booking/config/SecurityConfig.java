@@ -1,4 +1,4 @@
-package com.gn.book.config.jwt;
+package com.gn.booking.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

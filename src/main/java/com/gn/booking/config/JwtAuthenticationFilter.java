@@ -1,4 +1,4 @@
-package com.gn.book.config.jwt;
+package com.gn.booking.config;
 
 import java.io.IOException;
 
@@ -22,7 +22,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter{
 	// 1. JwtAuthenticationFilter
 	// 2. UsernamePasswordAuthenticationFilter
 	private final JwtTokenProvider jwtTokenProvider;
-	 
+
 	 @Override
 	    protected void doFilterInternal(HttpServletRequest request,HttpServletResponse response,FilterChain filterChain)
 	            throws ServletException, IOException {
