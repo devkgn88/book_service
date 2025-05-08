@@ -24,6 +24,7 @@ booking-service는 회의실 예약 정보를 관리하는 백엔드 마이크�
 * Kafka를 통한 비동기 데이터 처리
 * JWT 인증으로 안전한 API 호출
 * Kibana 대시보드를 통한 예약 모니터링
+![Image](https://github.com/user-attachments/assets/5d8cb6aa-0733-4d3b-8b80-95b5e777f771)
 
 ## 🚀 설치 및 실행
 1. 프로젝트 클론
